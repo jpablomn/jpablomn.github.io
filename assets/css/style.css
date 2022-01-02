@@ -1,5 +1,5 @@
 /**
-* Template Name: iPortfolio - v3.6.0
+* Template Name: iPortfolio - v3.7.0
 * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -450,7 +450,36 @@ section {
   background: #fff;
   border: 2px solid #1f5297;
 }
-
+/*--------------------------------------------------------------
+# Portfolio Certificados
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters2 {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.portfolio #portfolio-flters2 li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #272829;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-flters2 li:hover, .portfolio #portfolio-flters2 li.filter-active {
+  color: #149ddd;
+}
+.portfolio #portfolio-flters2 li:last-child {
+  margin-right: 0;
+}
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
