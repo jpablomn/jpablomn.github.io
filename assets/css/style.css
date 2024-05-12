@@ -633,8 +633,8 @@ section .container {
 
 /*--------------------------------------------------------------
 # Services
---------------------------------------------------------------*/
-/*
+--------------------------------------------------------------
+
 .services .icon-box {
   text-align: center;
   background: rgba(204, 204, 204, 0.1);
@@ -699,6 +699,33 @@ section .container {
 .services .icon-box:hover h4 a, .services .icon-box:hover p {
   color: #fff;
 }
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -1268,35 +1295,67 @@ section .container {
   }
 }
 
+
+
 /*--------------------------------------------------------------
-# Credits
+# Experiencia
 --------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 15px;
-  text-align: right;
-  font-size: 13px;
+.services .services-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #fff;
-  z-index: 999999;
 }
 
-@media (max-width: 992px) {
-  .credits {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-  }
+.services .services-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 
-.credits a {
+.services .services-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
   color: #18d26e;
-  transition: 0.3s;
+  margin-bottom: 10px;
 }
 
-.credits a:hover {
-  color: #fff;
+.services .services-item h5 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
+
+.services .services-item ul {
+  padding-left: 20px;
+}
+
+.services .services-item ul li {
+  padding-bottom: 10px;
+}
+
+.services .services-item:last-child {
+  padding-bottom: 0;
+}
+
+.services .services-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: #18d26e;
+  border: 2px solid #18d26e;
+}
+
 
