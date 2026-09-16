@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Titanic — Análisis de Supervivencia — Juan Pablo Madrigal</title>
+  <meta name="description" content="Case study: análisis estadístico de supervivencia en el Titanic con Python, pruebas de chi-cuadrado y ANOVA.">
+
+  <!-- Favicons -->
+  <link href="../assets/img/icono2.png" rel="icon">
+  <link href="../assets/img/icono2.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="case-study__header">
+    <div class="container">
+      <h1><a href="../index.html">Juan Pablo Madrigal</a></h1>
+      <a href="../index.html#dossier-python" class="case-study__breadcrumb">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al portafolio
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-study">
+      <div class="container">
+
+        <span class="case-study__kicker">Python · Data Science · Estadística</span>
+        <h1 class="case-study__title">Titanic — Análisis de Supervivencia</h1>
+        <p class="case-study__lede">
+          Análisis estadístico de los factores asociados a la supervivencia de los pasajeros del RMS Titanic,
+          combinando estadística descriptiva con pruebas de hipótesis formales (chi-cuadrado, ANOVA y tamaño del
+          efecto) para determinar qué variables realmente influyeron en el resultado.
+        </p>
+
+        <dl class="case-study__meta">
+          <div>
+            <dt>Dataset</dt>
+            <dd>Kaggle — Titanic (<code>train.csv</code>), 891 filas × 12 columnas</dd>
+          </div>
+          <div>
+            <dt>Herramientas</dt>
+            <dd>Python, Pandas, NumPy, SciPy (chi2_contingency, f_oneway, shapiro), Seaborn, Statsmodels (pairwise_tukeyhsd), Matplotlib, KaggleHub</dd>
+          </div>
+          <div>
+            <dt>Método</dt>
+            <dd>Estadística descriptiva + pruebas de hipótesis (chi-cuadrado, ANOVA, tamaño del efecto)</dd>
+          </div>
+          <div>
+            <dt>Equipo</dt>
+            <dd>Juan Pablo Madrigal Navarro &amp; Johana Marcela Hidalgo Zuluaga</dd>
+          </div>
+        </dl>
+
+        <div class="case-study__section">
+          <h2>Problema</h2>
+          <p>
+            El 15 de abril de 1912 el RMS Titanic se hundió tras chocar contra un iceberg. De los pasajeros a bordo,
+            solo una parte sobrevivió. El proyecto busca determinar qué variables — sexo, edad, clase, tarifa pagada,
+            número de familiares a bordo — se relacionan estadísticamente con la probabilidad de sobrevivir.
+          </p>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Objetivo</h2>
+          <p>
+            Determinar, con pruebas estadísticas formales (no solo observación descriptiva), qué variables presentan
+            una asociación significativa con la supervivencia, y distinguir entre significancia estadística y
+            magnitud real del efecto.
+          </p>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Metodología</h2>
+          <p>
+            Carga e inspección del dataset desde Kaggle vía <code>KaggleHub</code> → análisis exploratorio de las
+            variables (rangos de edad, tarifa) → pruebas de normalidad mediante Shapiro-Wilk y gráficos Q-Q →
+            análisis de relaciones entre variables → pruebas estadísticas según el tipo de variable (chi-cuadrado
+            para categóricas frente a supervivencia) → ANOVA, cálculo del tamaño del efecto y comparación post hoc
+            de Tukey para variables cuantitativas → interpretación de resultados y conclusiones.
+          </p>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Key Findings</h2>
+        </div>
+
+        <div class="case-study__stats">
+          <div class="case-study__stat"><strong>74,2%</strong><span>de las mujeres sobrevivió, frente a 18,9% de los hombres</span></div>
+          <div class="case-study__stat"><strong>38,4%</strong><span>tasa de supervivencia general (342 de 891 pasajeros)</span></div>
+          <div class="case-study__stat"><strong>p = 0,0045</strong><span>chi² — la categoría de edad se asocia significativamente con la supervivencia</span></div>
+          <div class="case-study__stat"><strong>0,41–0,45</strong><span>correlación de Spearman entre tarifa y variables familiares</span></div>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Visualizaciones</h2>
+        </div>
+
+        <figure class="case-study__figure">
+          <a href="../assets/img/portfolio/python/titanic-sexo-supervivencia.png" class="case-study-lightbox" data-gallery="titanicGallery">
+            <img src="../assets/img/portfolio/python/titanic-sexo-supervivencia.png" alt="Tabla de contingencia: sexo vs. supervivencia">
+          </a>
+          <figcaption>El hallazgo más fuerte del análisis: 233 de 314 mujeres sobrevivieron (74,2%), frente a solo 109 de 577 hombres (18,9%).</figcaption>
+        </figure>
+
+        <figure class="case-study__figure">
+          <a href="../assets/img/portfolio/python/titanic-edad-supervivencia.png" class="case-study-lightbox" data-gallery="titanicGallery">
+            <img src="../assets/img/portfolio/python/titanic-edad-supervivencia.png" alt="Tabla de contingencia: categoría de edad vs. supervivencia">
+          </a>
+          <figcaption>La categoría de edad muestra asociación estadísticamente significativa con la supervivencia (chi², p = 0,0045), aunque con un tamaño de efecto pequeño.</figcaption>
+        </figure>
+
+        <figure class="case-study__figure">
+          <a href="../assets/img/portfolio/python/titanic-tarifa-supervivencia.png" class="case-study-lightbox" data-gallery="titanicGallery">
+            <img src="../assets/img/portfolio/python/titanic-tarifa-supervivencia.png" alt="Boxplot y violin plot de tarifa pagada según supervivencia">
+          </a>
+          <figcaption>La tarifa pagada fue, según el ANOVA, la única variable cuantitativa con una influencia real (no solo estadísticamente significativa) sobre la supervivencia.</figcaption>
+        </figure>
+
+        <figure class="case-study__figure">
+          <a href="../assets/img/portfolio/python/titanic-correlacion-spearman.png" class="case-study-lightbox" data-gallery="titanicGallery">
+            <img src="../assets/img/portfolio/python/titanic-correlacion-spearman.png" alt="Matriz de correlación de Spearman entre variables cuantitativas">
+          </a>
+          <figcaption>La edad presenta asociaciones muy débiles con las demás variables; hermanos/cónyuges, padres/hijos y tarifa muestran correlaciones moderadas entre sí (ρ entre 0,41 y 0,45).</figcaption>
+        </figure>
+
+        <div class="case-study__section">
+          <h2>Conclusiones</h2>
+          <p>
+            El sexo fue una de las variables con mayor relación con la supervivencia: las mujeres sobrevivieron en una
+            proporción muy superior a los hombres. La clase del pasajero también presentó una relación importante con el resultado.
+          </p>
+          <p>
+            El análisis estadístico formal reveló un matiz clave: aunque la categoría de edad resultó significativa
+            en la prueba de chi-cuadrado, su tamaño de efecto fue pequeño — es decir, estadísticamente detectable pero
+            de poca influencia real. En cambio, la tarifa pagada sí mostró una influencia relevante sobre la
+            probabilidad de supervivencia según el ANOVA. Ninguna de las variables cuantitativas analizadas siguió
+            una distribución normal (prueba de Shapiro-Wilk), lo cual se tuvo en cuenta al interpretar los resultados.
+          </p>
+        </div>
+
+        <a href="../Titanic_DataSet.html" class="case-study__cta" target="_blank" rel="noopener noreferrer">
+          Ver el análisis completo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+        <p class="case-study__notebook-note">
+          Abre el notebook completo (Jupyter, exportado a HTML) en una pestaña nueva — código, tablas y las 20
+          visualizaciones originales del análisis, aislado del resto del sitio.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__row">
+      <span>© 2026 Juan Pablo Madrigal Navarro</span>
+      <span>Medellín, Colombia</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/case-study.js"></script>
+
+</body>
+
+</html>

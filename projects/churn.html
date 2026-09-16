@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Bank Customer Churn Prediction — Juan Pablo Madrigal</title>
+  <meta name="description" content="Case study: análisis de deserción de clientes bancarios (Bank Customer Churn Prediction) con Python, Pandas y Seaborn.">
+
+  <!-- Favicons -->
+  <link href="../assets/img/icono2.png" rel="icon">
+  <link href="../assets/img/icono2.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="case-study__header">
+    <div class="container">
+      <h1><a href="../index.html">Juan Pablo Madrigal</a></h1>
+      <a href="../index.html#dossier-python" class="case-study__breadcrumb">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al portafolio
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-study">
+      <div class="container">
+
+        <span class="case-study__kicker">Python · Data Science · Análisis bancario</span>
+        <h1 class="case-study__title">Bank Customer Churn Prediction</h1>
+        <p class="case-study__lede">
+          Análisis de la deserción (churn) de clientes de un banco a partir de un conjunto de datos de 10.000 clientes,
+          con el objetivo de identificar qué características se asocian a que un cliente abandone la entidad y proponer
+          estrategias de retención basadas en evidencia.
+        </p>
+
+        <dl class="case-study__meta">
+          <div>
+            <dt>Dataset</dt>
+            <dd>Kaggle — Bank Customer Churn Prediction (<code>Churn_Modelling.csv</code>), 10.000 filas × 14 columnas</dd>
+          </div>
+          <div>
+            <dt>Herramientas</dt>
+            <dd>Python, Pandas, NumPy, Matplotlib, Seaborn, KaggleHub</dd>
+          </div>
+          <div>
+            <dt>Método</dt>
+            <dd>Análisis exploratorio + segmentación por variables categóricas y de comportamiento</dd>
+          </div>
+          <div>
+            <dt>Equipo</dt>
+            <dd>Juan Pablo Madrigal Navarro &amp; Johana Marcela Hidalgo Zuluaga</dd>
+          </div>
+        </dl>
+
+        <div class="case-study__section">
+          <h2>Problema</h2>
+          <p>
+            El banco necesita entender qué factores están asociados a que un cliente decida abandonar la entidad,
+            para poder anticiparse y diseñar estrategias de retención dirigidas a los segmentos con mayor riesgo.
+          </p>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Objetivo</h2>
+          <p>
+            Identificar las principales características y factores asociados a la deserción de clientes (churn),
+            respondiendo preguntas concretas sobre edad, género, país, saldo, actividad, tarjeta de crédito, score
+            crediticio y número de productos contratados.
+          </p>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Metodología</h2>
+          <p>
+            Carga del dataset desde Kaggle vía <code>KaggleHub</code> → inspección y limpieza de los datos →
+            segmentación de clientes por categorías (edad, saldo, score crediticio, número de productos, actividad) →
+            cálculo de tasas de deserción por segmento → síntesis de hallazgos y estrategias de retención.
+          </p>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Key Findings</h2>
+        </div>
+
+        <div class="case-study__stats">
+          <div class="case-study__stat"><strong>20,37%</strong><span>de los clientes abandonó el banco (2.037 de 10.000)</span></div>
+          <div class="case-study__stat"><strong>39,96%</strong><span>tasa de churn en Alemania — la más alta por país</span></div>
+          <div class="case-study__stat"><strong>26,85%</strong><span>churn en clientes inactivos, frente a 14,27% en activos</span></div>
+          <div class="case-study__stat"><strong>88,2%</strong><span>de abandono en clientes multiproducto avanzado e inactivos</span></div>
+        </div>
+
+        <div class="case-study__section">
+          <h2>Visualizaciones</h2>
+        </div>
+
+        <figure class="case-study__figure">
+          <a href="../assets/img/portfolio/python/churn-distribucion-exited.png" class="case-study-lightbox" data-gallery="churnGallery">
+            <img src="../assets/img/portfolio/python/churn-distribucion-exited.png" alt="Distribución de clientes retenidos vs. desertores (Exited)">
+          </a>
+          <figcaption>Distribución de la variable Exited: 79,63% de los clientes permanece, 20,37% abandona el banco.</figcaption>
+        </figure>
+
+        <figure class="case-study__figure">
+          <a href="../assets/img/portfolio/python/churn-productos-actividad.png" class="case-study-lightbox" data-gallery="churnGallery">
+            <img src="../assets/img/portfolio/python/churn-productos-actividad.png" alt="Porcentaje de abandono según número de productos y actividad del cliente">
+          </a>
+          <figcaption>El hallazgo más fuerte del análisis: el porcentaje de abandono escala drásticamente en clientes multiproducto cuando además están inactivos.</figcaption>
+        </figure>
+
+        <div class="case-study__section">
+          <h2>Conclusiones</h2>
+          <p>
+            De los 10.000 clientes analizados, 2.037 abandonaron el banco (20,37%), lo que significa que aproximadamente
+            1 de cada 5 clientes desertó. Uno de los hallazgos más relevantes fue el peso de la actividad del cliente:
+            los clientes inactivos presentan una tasa de abandono considerablemente mayor que los activos. La combinación
+            de múltiples productos contratados junto con inactividad es la condición con mayor riesgo de abandono
+            observada en todo el análisis.
+          </p>
+          <p>
+            A partir de estos resultados, el proyecto propone estrategias de retención centradas en reactivar clientes
+            inactivos (campañas y beneficios personalizados) y en dar seguimiento prioritario a los clientes multiproducto
+            que muestran señales de baja actividad, antes de que la falta de interacción se convierta en abandono.
+          </p>
+        </div>
+
+        <a href="../Bank_Customer_Churn_Prediction.html" class="case-study__cta" target="_blank" rel="noopener noreferrer">
+          Ver el análisis completo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+        </a>
+        <p class="case-study__notebook-note">
+          Abre el notebook completo (Jupyter, exportado a HTML) en una pestaña nueva — código, tablas y las 3
+          visualizaciones originales del análisis, aislado del resto del sitio.
+        </p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__row">
+      <span>© 2026 Juan Pablo Madrigal Navarro</span>
+      <span>Medellín, Colombia</span>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/js/case-study.js"></script>
+
+</body>
+
+</html>
