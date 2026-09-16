@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juan Pablo Madrigal Navarro — Ciencia de Datos &amp; Analítica</title>
+  <meta name="description" content="Portafolio de Juan Pablo Madrigal Navarro: Ingeniero Industrial y Especialista en Ciencia de Datos e Inteligencia Artificial. Excel, Power BI, SQL, Python y automatización de procesos en banca y manufactura.">
+
+  <link rel="icon" href="assets/img/icono2.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="is-loading">
+
+  <!-- ======= Scroll progress ======= -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ======= Preloader ======= -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <span class="preloader__mark">JPM</span>
+    <div class="preloader__bar"><span class="preloader__bar-fill" id="preloaderFill"></span></div>
+  </div>
+  <noscript><style>.preloader{display:none!important;} body.is-loading{overflow:visible!important;height:auto!important;}</style></noscript>
+
+  <!-- ======= Custom cursor (desktop only) ======= -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ======= Spine navigation (desktop) ======= -->
+  <header class="spine">
+    <a href="#inicio" class="spine__mark" aria-label="Ir al inicio">JPM</a>
+    <nav class="spine__nav" aria-label="Secciones del portafolio">
+      <ul class="spine__list" id="spineList">
+        <span class="spine__indicator" id="spineIndicator" aria-hidden="true"></span>
+        <li><a href="#perfil" class="spine__link" data-nav>Perfil</a></li>
+        <li><a href="#formacion" class="spine__link" data-nav>Formación</a></li>
+        <li><a href="#experiencia" class="spine__link" data-nav>Experiencia</a></li>
+        <li><a href="#proyectos" class="spine__link" data-nav>Proyectos</a></li>
+        <li><a href="#certificaciones" class="spine__link" data-nav>Certificaciones</a></li>
+        <li><a href="#contacto" class="spine__link" data-nav>Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="spine__social">
+      <a href="https://www.linkedin.com/in/juan-pablo-madrigal-navarro-14b39a1b6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.22 8.24h4.56V23H.22V8.24zM8.4 8.24h4.37v2.01h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V23h-4.56v-6.94c0-1.66-.03-3.79-2.31-3.79-2.32 0-2.68 1.81-2.68 3.67V23H8.4V8.24z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/jpabloomn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.31-1.46.72-2.13 1.38C1.35 2.67.94 3.34.63 4.13c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91-.3-.79-.71-1.46-1.38-2.13C21.33 1.35 20.66.94 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+      </a>
+      <a href="mailto:jpabloomn@gmail.com" aria-label="Enviar correo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3V5zm0 0l9 8 9-8"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- ======= Mobile topbar ======= -->
+  <div class="topbar">
+    <span class="topbar__mark">JPM</span>
+    <button class="topbar__toggle" id="navToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+    <ul class="mobile-nav__list">
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#formacion">Formación</a></li>
+      <li><a href="#experiencia">Experiencia</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#certificaciones">Certificaciones</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <div class="mobile-nav__social">
+      <a href="https://www.linkedin.com/in/juan-pablo-madrigal-navarro-14b39a1b6/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.22 8.24h4.56V23H.22V8.24zM8.4 8.24h4.37v2.01h.06c.61-1.15 2.1-2.37 4.32-2.37 4.62 0 5.47 3.04 5.47 6.99V23h-4.56v-6.94c0-1.66-.03-3.79-2.31-3.79-2.32 0-2.68 1.81-2.68 3.67V23H8.4V8.24z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/jpabloomn/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07c-1.28.06-2.15.26-2.91.56-.79.31-1.46.72-2.13 1.38C1.35 2.67.94 3.34.63 4.13c-.3.76-.5 1.63-.56 2.91C.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.28.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.67 1.34 1.08 2.13 1.38.76.3 1.63.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.28-.06 2.15-.26 2.91-.56.79-.3 1.46-.71 2.13-1.38.67-.67 1.08-1.34 1.38-2.13.3-.76.5-1.63.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.28-.26-2.15-.56-2.91-.3-.79-.71-1.46-1.38-2.13C21.33 1.35 20.66.94 19.87.63c-.76-.3-1.63-.5-2.91-.56C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zm0 10.16A4 4 0 1 1 12 8a4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <div class="site">
+
+    <!-- ======= Hero ======= -->
+    <section class="hero" id="inicio">
+      <div class="hero__media">
+        <img src="assets/img/hero-portrait.jpeg" alt="" loading="eager">
+      </div>
+      <div class="hero__scrim"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="hero__role" data-hero-in>Ingeniero Industrial · Especialista en Ciencia de Datos e Inteligencia Artificial</p>
+        <h1 class="hero__name" id="heroName">
+          <span class="hero__line"><span class="hero__line-inner">Juan Pablo Madrigal</span></span>
+          <span class="hero__line"><span class="hero__line-inner">Navarro</span></span>
+        </h1>
+        <p class="hero__lede" data-hero-in>
+          De una planta de manufactura a la operación digital de un banco, he trabajado con el mismo principio:
+          entender el dato antes de automatizar, y automatizar antes de escalar. Hoy combino Excel, SQL, Power BI
+          y Python con una especialización en Ciencia de Datos e Inteligencia Artificial en curso.
+        </p>
+        <ul class="hero__facts" data-hero-in>
+          <li>Medellín, Colombia</li>
+          <li>Actualmente trabajo en Bancolombia</li>
+          <li>Especialista en Ciencia de Datos e IA — 2026/2027</li>
+        </ul>
+        <div class="hero__actions" data-hero-in>
+          <a href="#proyectos" class="btn btn--primary" data-magnetic>Ver proyectos</a>
+          <a href="#contacto" class="btn btn--ghost" data-magnetic>Escríbeme</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Perfil ======= -->
+    <section class="section" id="perfil">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Perfil</h2>
+          <p class="section__intro">Quién soy y qué he hecho hasta hoy.</p>
+        </div>
+
+        <div class="profile reveal">
+          <div class="profile__portrait">
+            <img src="assets/img/about-portrait.jpeg" alt="Juan Pablo Madrigal Navarro">
+          </div>
+          <div class="profile__body">
+            <p class="profile__lede">
+              Soy Ingeniero Industrial y curso la especialización en Ciencia de Datos e Inteligencia Artificial en
+              la Universidad de Medellín. Construí esta página para reemplazar el PDF estático de siempre por algo
+              que muestre cómo trabajo: con datos reales, tableros reales y procesos que sí implementé.
+            </p>
+
+            <dl class="profile__facts">
+              <div><dt>Nacimiento</dt><dd>28 de diciembre de 1997</dd></div>
+              <div><dt>Idiomas</dt><dd>Español (nativo), inglés básico</dd></div>
+              <div><dt>Ciudad</dt><dd>Medellín, Colombia</dd></div>
+              <div><dt>Contacto</dt><dd>+57 301 520 1972</dd></div>
+            </dl>
+
+            <div class="profile__bio">
+              <p>
+                Tengo experiencia en gestión y optimización de bases de datos, análisis estadístico y automatización
+                de procesos. He desarrollado informes y tableros dinámicos en Excel, Power BI y Splunk, además de
+                implementar mejoras en bases de datos utilizando SQL. Manejo modelado de pronósticos, análisis e
+                interpretación de datos, y automatizo tareas con UiPath, Knime y Python.
+              </p>
+              <p>
+                También me he desempeñado como Product Owner: lideré iniciativas de mejora continua, gestioné y
+                prioricé el backlog de producto, e impulsé la colaboración con equipos multifuncionales para mantener
+                la alineación con los objetivos del negocio. Trabajo en equipo, asumo responsabilidad y busco de
+                forma constante la eficiencia operativa.
+              </p>
+            </div>
+
+            <div class="highlights">
+              <div class="highlight"><div class="highlight__value"><span class="count" data-count-to="5">0</span> años</div><div class="highlight__label">de experiencia en analítica, datos y operaciones</div></div>
+              <div class="highlight"><div class="highlight__value"><span class="count" data-count-to="4">0</span></div><div class="highlight__label">compañías: manufactura, retail, fondo de pensiones y banca</div></div>
+              <div class="highlight"><div class="highlight__value"><span class="count" data-count-to="8">0</span></div><div class="highlight__label">certificaciones y diplomas completados</div></div>
+              <div class="highlight"><div class="highlight__value"><span class="count" data-count-to="2">0</span></div><div class="highlight__label">análisis de datos publicados de principio a fin</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Skills (parte de Perfil) ======= -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Herramientas</h2>
+          <p class="section__intro">Nivel de dominio autoevaluado, agrupado por cómo las uso en el trabajo diario.</p>
+        </div>
+
+        <div class="skills reveal">
+          <div class="skill-group">
+            <h3 class="skill-group__title">Análisis &amp; BI</h3>
+            <div class="skill" data-pct="90"><div class="skill__row"><span class="skill__name">Excel</span><span class="skill__value">90%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:90%"></div></div></div>
+            <div class="skill" data-pct="90"><div class="skill__row"><span class="skill__name">Power BI</span><span class="skill__value">90%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:90%"></div></div></div>
+            <div class="skill" data-pct="70"><div class="skill__row"><span class="skill__name">SQL</span><span class="skill__value">70%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:70%"></div></div></div>
+            <div class="skill" data-pct="65"><div class="skill__row"><span class="skill__name">Splunk</span><span class="skill__value">65%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:65%"></div></div></div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Automatización &amp; apps</h3>
+            <div class="skill" data-pct="70"><div class="skill__row"><span class="skill__name">Knime</span><span class="skill__value">70%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:70%"></div></div></div>
+            <div class="skill" data-pct="60"><div class="skill__row"><span class="skill__name">UiPath</span><span class="skill__value">60%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:60%"></div></div></div>
+            <div class="skill" data-pct="60"><div class="skill__row"><span class="skill__name">Power Automate</span><span class="skill__value">60%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:60%"></div></div></div>
+            <div class="skill" data-pct="60"><div class="skill__row"><span class="skill__name">Power Apps</span><span class="skill__value">60%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:60%"></div></div></div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Programación &amp; datos</h3>
+            <div class="skill" data-pct="70"><div class="skill__row"><span class="skill__name">Python</span><span class="skill__value">70%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:70%"></div></div></div>
+            <div class="skill" data-pct="50"><div class="skill__row"><span class="skill__name">HTML</span><span class="skill__value">50%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:50%"></div></div></div>
+            <div class="skill" data-pct="50"><div class="skill__row"><span class="skill__name">CSS</span><span class="skill__value">50%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:50%"></div></div></div>
+          </div>
+          <div class="skill-group">
+            <h3 class="skill-group__title">Gestión &amp; producto</h3>
+            <div class="skill" data-pct="80"><div class="skill__row"><span class="skill__name">Metodologías ágiles</span><span class="skill__value">80%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:80%"></div></div></div>
+            <div class="skill" data-pct="70"><div class="skill__row"><span class="skill__name">GitHub (backlog)</span><span class="skill__value">70%</span></div><div class="skill__bar"><div class="skill__bar-fill" style="--w:70%"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Formación ======= -->
+    <section class="section" id="formacion">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Formación</h2>
+          <p class="section__intro">Educación formal y cursos complementarios.</p>
+        </div>
+
+        <div class="education reveal">
+          <div>
+            <div class="edu-item">
+              <div class="edu-item__meta"><span>2026 — 2027</span><span class="tag--current">En curso</span></div>
+              <h3>Especialista en Ciencia de Datos e Inteligencia Artificial</h3>
+              <p>Universidad de Medellín</p>
+            </div>
+            <div class="edu-item">
+              <div class="edu-item__meta"><span>2016 — 2022</span><span>Promedio 3,8</span></div>
+              <h3>Ingeniería Industrial</h3>
+              <p>Universidad de Medellín</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="skill-group__title">Cursos y diplomados</h3>
+            <ul class="courses">
+              <li>Curso Senior Product Owner</li>
+              <li>Curso Junior Product Owner</li>
+              <li>SQL — curso completo de bases de datos, de 0 a avanzado</li>
+              <li>Inferential Statistical Analysis with Python</li>
+              <li>Programación en Excel nivel I (Visual Basic for Applications)</li>
+              <li>Excel — base de datos</li>
+              <li>Excel — manejo práctico de datos</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Experiencia ======= -->
+    <section class="section section--tint" id="experiencia">
+      <div class="container">
+        <div class="section__head">
+          <p class="section__num">2021 — actualidad</p>
+          <h2 class="section__title">Experiencia</h2>
+          <p class="section__intro">Cuatro roles, un mismo hilo: procesos, datos y las personas que dependen de ellos.</p>
+        </div>
+
+        <div class="timeline reveal" id="timeline">
+          <div class="timeline__progress" id="timelineProgress" aria-hidden="true"></div>
+
+          <article class="timeline__item">
+            <span class="timeline__marker"></span>
+            <p class="timeline__date">9 de agosto de 2021 — 8 de febrero de 2022</p>
+            <h3 class="timeline__role">Practicante, Planeación de la Oferta</h3>
+            <p class="timeline__org">Muma</p>
+            <ul class="timeline__list">
+              <li>Generé órdenes de producción de garantías, reprocesos y prototipos en SAP MP y MM.</li>
+              <li>Hice seguimiento al cumplimiento del área de producción de garantías, reprocesos, servicios y prototipos.</li>
+              <li>Diseñé un tablero de control de producción en Power BI para el seguimiento del proceso de manufactura.</li>
+              <li>Implementé KPI de eficiencia, capacidad y productividad, con detalle por área.</li>
+              <li>Rediseñé un archivo de Excel con Visual Basic (VBA) para pronosticar los productos más pedidos y ajustar el stock del área de inyección.</li>
+              <li>Diseñé un Excel de control de stock para terceros, para cumplir con la entrega oportuna de materiales.</li>
+            </ul>
+            <ul class="timeline__tags">
+              <li class="tag">Excel</li><li class="tag">VBA</li><li class="tag">Power BI</li><li class="tag">SAP</li>
+            </ul>
+          </article>
+
+          <article class="timeline__item">
+            <span class="timeline__marker"></span>
+            <p class="timeline__date">6 de febrero de 2023 — 22 de septiembre de 2023</p>
+            <h3 class="timeline__role">Analista Big Data</h3>
+            <p class="timeline__org">Inversiones Vaquita Express</p>
+            <ul class="timeline__list">
+              <li>Realicé informes diarios y mensuales mediante dashboards en Excel y Power BI.</li>
+              <li>Actualicé y depuré bases de datos a diario para sostener la calidad de los informes.</li>
+              <li>Automaticé tareas repetitivas con UiPath.</li>
+              <li>Creé un proyecto de pronóstico de demanda con modelos estadísticos en Python.</li>
+              <li>Diseñé consultas y modelos de bases de datos en SQL.</li>
+              <li>Desarrollé un aplicativo interno con Power Apps y Power Automate para la gestión documental entre equipos.</li>
+            </ul>
+            <ul class="timeline__tags">
+              <li class="tag">Excel</li><li class="tag">Python</li><li class="tag">Power BI</li><li class="tag">Power Apps</li><li class="tag">Power Automate</li><li class="tag">UiPath</li><li class="tag">SQL</li>
+            </ul>
+          </article>
+
+          <article class="timeline__item">
+            <span class="timeline__marker"></span>
+            <p class="timeline__date">25 de septiembre de 2023 — 28 de abril de 2026</p>
+            <h3 class="timeline__role">Analista de Gestión de la Información · Product Owner</h3>
+            <p class="timeline__org">Protección S.A.S</p>
+            <ul class="timeline__list">
+              <li>Coordiné con equipos internos la generación de extractos (PO, CES, PEN, PV, PAT, CG) para cumplir la entrega oportuna de las comunicaciones.</li>
+              <li>Construí indicadores en Power BI y Splunk, y automaticé tareas con Python, UiPath y Knime.</li>
+              <li>Administré el cumplimiento de los ANS de los proveedores y gestioné el presupuesto del equipo.</li>
+              <li>Documenté instructivos, políticas y flujos de proceso alineados a los lineamientos de la organización.</li>
+              <li>Como Product Owner: definí visión y objetivos de producto, y creé y prioricé el backlog según valor para negocio y cliente.</li>
+              <li>Facilité revisiones de sprint, gestioné el proyecto bajo Scrum y tomé decisiones de producto basadas en datos.</li>
+            </ul>
+            <ul class="timeline__tags">
+              <li class="tag">Power BI</li><li class="tag">Splunk</li><li class="tag">Python</li><li class="tag">UiPath</li><li class="tag">Knime</li><li class="tag">SQL</li><li class="tag">Scrum</li><li class="tag">Product Owner</li>
+            </ul>
+          </article>
+
+          <article class="timeline__item is-current">
+            <span class="timeline__marker"></span>
+            <p class="timeline__date">28 de abril de 2026 — actualidad</p>
+            <h3 class="timeline__role">Analista III, Operación Digital</h3>
+            <p class="timeline__org">Bancolombia</p>
+            <ul class="timeline__list">
+              <li>Evalúo, optimizo y documento procesos operativos, cuidando estándares de calidad, SLA y eficiencia.</li>
+              <li>Diseño e implemento mejoras en procesos y planes de contingencia para la continuidad operativa y la prevención de fraude.</li>
+              <li>Analizo capacidad instalada y recomiendo recursos para mejorar productividad y cumplimiento de servicio.</li>
+              <li>Monitoreo indicadores de gestión (PQR, incidentes, costos, transacciones, desempeño de canales) para priorizar mejoras.</li>
+            </ul>
+            <ul class="timeline__tags">
+              <li class="tag">Excel</li><li class="tag">Python</li><li class="tag">Power BI</li><li class="tag">SQL</li><li class="tag">Gestión de riesgo</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Proyectos ======= -->
+    <section class="section portfolio-dossier" id="proyectos">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Proyectos</h2>
+          <p class="section__intro">Una muestra de trabajo real: macros y formularios en Excel, tableros de negocio en Power BI y análisis de datos en Python.</p>
+        </div>
+
+        <nav class="dossier-rail" aria-label="Categorías de proyectos">
+          <a href="#dossier-excel" class="dossier-rail__link is-active" data-target="dossier-excel">Excel</a>
+          <a href="#dossier-bi" class="dossier-rail__link" data-target="dossier-bi">Power BI</a>
+          <a href="#dossier-python" class="dossier-rail__link" data-target="dossier-python">Python</a>
+        </nav>
+
+        <article class="dossier-block" id="dossier-excel">
+          <header class="dossier-block__header">
+            <span class="dossier-kicker">Excel</span>
+            <h3>Automatización &amp; análisis</h3>
+            <p class="dossier-block__desc">Macros, formularios y modelos de pronóstico construidos en Excel para procesos reales de operación.</p>
+          </header>
+          <div class="dossier-excel-grid">
+            <figure class="dossier-excel-item dossier-excel-item--tall">
+              <a href="assets/img/portfolio/excel-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/excel-3.jpg" alt="Interfaz de una ventana del formulario para el registro de actividad." loading="lazy">
+              </a>
+              <figcaption>Formulario para el registro de actividad.</figcaption>
+            </figure>
+            <figure class="dossier-excel-item dossier-excel-item--wide">
+              <a href="assets/img/portfolio/excel-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/excel-4.jpg" alt="Hoja de pronósticos y gráficas para la toma de decisiones." loading="lazy">
+              </a>
+              <figcaption>Hoja de pronósticos para la toma de decisiones.</figcaption>
+            </figure>
+            <figure class="dossier-excel-item">
+              <a href="assets/img/portfolio/excel-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/excel-1.jpg" alt="Presentación de la hoja con una macro en la imagen de la empresa." loading="lazy">
+              </a>
+              <figcaption>Hoja con macro en la imagen de la empresa.</figcaption>
+            </figure>
+            <figure class="dossier-excel-item">
+              <a href="assets/img/portfolio/excel-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/excel-2.jpg" alt="Interfaz inicial del formulario para el stock de inyección de la empresa." loading="lazy">
+              </a>
+              <figcaption>Formulario de stock de inyección.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="dossier-block" id="dossier-bi">
+          <header class="dossier-block__header">
+            <span class="dossier-kicker">Power BI</span>
+            <h3>Visualización &amp; business intelligence</h3>
+            <p class="dossier-block__desc">Tableros de negocio para seguimiento de ventas, costos, ecommerce y productividad.</p>
+          </header>
+          <div class="dossier-bi-mosaic">
+            <figure class="dossier-bi-item dossier-bi-item--lg">
+              <a href="assets/img/portfolio/bi-ventas.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/bi-ventas.jpg" alt="Tablero de ventas." loading="lazy">
+              </a>
+              <figcaption>Tablero de ventas.</figcaption>
+            </figure>
+            <figure class="dossier-bi-item dossier-bi-item--sm">
+              <a href="assets/img/portfolio/bi-costos.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/bi-costos.jpg" alt="Tablero de costos." loading="lazy">
+              </a>
+              <figcaption>Tablero de costos.</figcaption>
+            </figure>
+            <figure class="dossier-bi-item">
+              <a href="assets/img/portfolio/bi-ecommerce-resumen.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/bi-ecommerce-resumen.jpg" alt="Tablero resumen ecommerce." loading="lazy">
+              </a>
+              <figcaption>Resumen ecommerce.</figcaption>
+            </figure>
+            <figure class="dossier-bi-item">
+              <a href="assets/img/portfolio/bi-ecommerce-ventas.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/bi-ecommerce-ventas.jpg" alt="Tablero ventas ecommerce." loading="lazy">
+              </a>
+              <figcaption>Ventas ecommerce.</figcaption>
+            </figure>
+            <figure class="dossier-bi-item">
+              <a href="assets/img/portfolio/bi-indice-felicidad.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                <img src="assets/img/portfolio/bi-indice-felicidad.jpg" alt="Tablero de índice de felicidad mundial." loading="lazy">
+              </a>
+              <figcaption>Índice de felicidad mundial.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="dossier-block" id="dossier-python">
+          <header class="dossier-block__header">
+            <span class="dossier-kicker">Python / Data Science</span>
+            <h3>Ciencia de datos &amp; análisis estadístico</h3>
+            <p class="dossier-block__desc">Proyectos de análisis de datos aplicando estadística, visualización y programación en Python durante la especialización en Ciencia de Datos e Inteligencia Artificial.</p>
+          </header>
+          <div class="dossier-python-grid">
+            <a class="python-case" href="projects/churn.html">
+              <div class="python-case__visual">
+                <img src="assets/img/portfolio/python/churn-distribucion-exited.png" alt="Distribución de clientes retenidos vs. desertores" loading="lazy">
+              </div>
+              <div class="python-case__body">
+                <span class="python-case__label">Python · Análisis bancario</span>
+                <h4>Bank Customer Churn Prediction</h4>
+                <p class="python-case__problem">¿Qué características de los clientes de un banco se asocian a la deserción (churn)?</p>
+                <div class="python-case__stats">
+                  <div><strong>10.000</strong><span>clientes</span></div>
+                  <div><strong>20,37%</strong><span>churn global</span></div>
+                  <div><strong>88,2%</strong><span>abandono multiproducto inactivo</span></div>
+                </div>
+                <ul class="python-case__tools">
+                  <li>Python</li><li>Pandas</li><li>NumPy</li><li>Matplotlib</li><li>Seaborn</li>
+                </ul>
+                <span class="python-case__cta">Ver el caso completo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </span>
+              </div>
+            </a>
+            <a class="python-case" href="projects/titanic.html">
+              <div class="python-case__visual">
+                <img src="assets/img/portfolio/python/titanic-sexo-supervivencia.png" alt="Tabla de contingencia: sexo vs. supervivencia" loading="lazy">
+              </div>
+              <div class="python-case__body">
+                <span class="python-case__label">Python · Estadística</span>
+                <h4>Titanic — Análisis de Supervivencia</h4>
+                <p class="python-case__problem">¿Qué variables se relacionan con la probabilidad de supervivencia en el naufragio del Titanic?</p>
+                <div class="python-case__stats">
+                  <div><strong>891</strong><span>pasajeros</span></div>
+                  <div><strong>74,2%</strong><span>mujeres sobrevivió</span></div>
+                  <div><strong>20</strong><span>visualizaciones</span></div>
+                </div>
+                <ul class="python-case__tools">
+                  <li>Python</li><li>Pandas</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li>
+                </ul>
+                <span class="python-case__cta">Ver el caso completo
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ======= Certificaciones ======= -->
+    <section class="section section--tint" id="certificaciones">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Certificaciones</h2>
+          <p class="section__intro">Título universitario, diplomas y cursos que respaldan las herramientas de arriba.</p>
+        </div>
+
+        <div class="cert-filters" role="group" aria-label="Filtrar certificaciones">
+          <button class="cert-filter is-active" data-filter="*">Todos</button>
+          <button class="cert-filter" data-filter="carrera">Carrera</button>
+          <button class="cert-filter" data-filter="diploma">Diplomas</button>
+          <button class="cert-filter" data-filter="curso">Cursos</button>
+          <button class="cert-filter" data-filter="ingles">Inglés</button>
+        </div>
+
+        <div class="cert-grid reveal">
+          <figure class="cert-item is-shown" data-cat="carrera">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/diploma-ingenieria-industrial.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/diploma-ingenieria-industrial.jpg" alt="Diploma de Ingeniería Industrial" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="diploma">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-excel-base-datos.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-excel-base-datos.jpg" alt="Certificado: Excel base de datos" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="diploma">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-manejo-practico-datos.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-manejo-practico-datos.jpg" alt="Certificado: manejo práctico de bases de datos" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="diploma">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-vba-nivel-1.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-vba-nivel-1.jpg" alt="Certificado: programación en Excel nivel I (VBA)" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="curso">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-energias-sustentables.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-energias-sustentables.jpg" alt="Certificado: energías sustentables" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="curso">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-python.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-python.jpg" alt="Certificado de Python" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="curso">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-sql.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-sql.jpg" alt="Certificado de SQL" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+          <figure class="cert-item is-shown" data-cat="ingles">
+            <div class="cert-item__wrap">
+              <a href="assets/img/certificados/cert-ingles.jpg" data-gallery="certGallery" class="cert-lightbox">
+                <img src="assets/img/certificados/cert-ingles.jpg" alt="Certificado de inglés" loading="lazy">
+                <span class="cert-item__zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4a7 7 0 100 14 7 7 0 000-14zM21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+              </a>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Testimonios ======= -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Lo que dicen de trabajar conmigo</h2>
+          <p class="section__intro">Compañeros y colegas de distintas etapas de mi carrera.</p>
+        </div>
+
+        <div class="testimonials reveal">
+          <div class="testimonial-track">
+            <div class="testimonial-track__inner" id="testimonialTrack">
+              <blockquote class="testimonial">
+                <p class="testimonial__quote">"Excelente persona y responsable, atenta y capaz de seguir las instrucciones al pie de la letra. Es proactiva y uno de sus mayores talentos es que es analítica: maneja lógica de programación en Python y VBA. Puedo afirmar que es excelente tanto en lo laboral —desarrolló una API para una empresa de mi familia— como en lo personal."</p>
+                <footer><cite class="testimonial__name">Johana Marcela Hidalgo</cite><div class="testimonial__role">Analista, Bancolombia</div></footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="testimonial__quote">"Considero que Juan Pablo es una persona muy capaz. No se queda con un solo conocimiento: indaga distintas formas de resolver una adversidad, y se le nota el interés por aprender y crecer. Tiene buen liderazgo y trabajo en equipo."</p>
+                <footer><cite class="testimonial__name">Andrés David Navarro De la Hoz</cite><div class="testimonial__role">Desarrollador, SisteCrédito</div></footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="testimonial__quote">"Juan Pablo es una persona íntegra, con valores intactos y un don de altruismo muy alto. Como profesional es autodidacta, proactivo y propositivo para resolver problemas. Su conocimiento académico lo pone al servicio de las empresas, y siempre destaca su puntualidad y responsabilidad con las tareas asignadas."</p>
+                <footer><cite class="testimonial__name">Norman Molina Grajales</cite><div class="testimonial__role">Auxiliar de Garantías</div></footer>
+              </blockquote>
+              <blockquote class="testimonial">
+                <p class="testimonial__quote">"Excelente desempeño, proactivo y diligente, con muy buena disposición para transmitir y recibir conocimiento."</p>
+                <footer><cite class="testimonial__name">Adriana Álvarez</cite><div class="testimonial__role">Auxiliar de Garantías</div></footer>
+              </blockquote>
+            </div>
+          </div>
+          <div class="testimonial-nav">
+            <button type="button" id="testimonialPrev" aria-label="Testimonio anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+            <button type="button" id="testimonialNext" aria-label="Siguiente testimonio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+            <span class="testimonial-nav__count"><span id="testimonialIndex">1</span> / 4</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contacto ======= -->
+    <section class="section section--dark" id="contacto">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Hablemos</h2>
+          <p class="section__intro">¿Un rol de analítica, datos o producto? Escríbeme directamente o deja tu mensaje.</p>
+        </div>
+
+        <div class="contact reveal">
+          <div>
+            <div class="contact__list">
+              <div class="contact__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11a7 7 0 0114 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                <div><h3>Ubicación</h3><p>Medellín, Colombia</p></div>
+              </div>
+              <div class="contact__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 5h18v14H3V5zm0 0l9 8 9-8"/></svg>
+                <div><h3>Correo</h3><a href="mailto:jpabloomn@gmail.com">jpabloomn@gmail.com</a></div>
+              </div>
+              <div class="contact__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.7a2 2 0 01-.4 2.1L8 9.9a16 16 0 006 6l1.4-1.4a2 2 0 012.1-.4c.9.3 1.8.5 2.7.6a2 2 0 011.8 2.2z"/></svg>
+                <div><h3>Teléfono</h3><a href="tel:+573015201972">+57 301 520 1972</a></div>
+              </div>
+              <div class="contact__item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 10.8l7.6-3.6M8.2 13.2l7.6 3.6"/></svg>
+                <div><h3>Redes</h3>
+                  <div class="contact__social">
+                    <a href="https://www.linkedin.com/in/juan-pablo-madrigal-navarro-14b39a1b6/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://www.instagram.com/jpabloomn/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact__cta">
+              <a href="https://wa.me/573015201972?text=Hola%20Juan%20Pablo%2C%20%C2%A1me%20encant%C3%B3%20tu%20perfil%20y%20quiero%20contactarme%20contigo%21" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp" data-magnetic>
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.47 14.38c-.29-.15-1.7-.84-1.97-.93-.26-.1-.46-.15-.65.14-.19.3-.75.94-.92 1.13-.17.2-.34.22-.63.08-.29-.15-1.22-.45-2.33-1.44-.86-.77-1.44-1.71-1.61-2-.17-.3-.02-.46.13-.6.13-.13.29-.34.44-.51.15-.17.19-.29.29-.49.1-.2.05-.37-.02-.51-.08-.15-.65-1.58-.9-2.16-.24-.57-.48-.5-.65-.5-.17 0-.37-.02-.56-.02-.2 0-.51.07-.78.37-.26.3-1.02 1-1.02 2.43 0 1.44 1.05 2.83 1.19 3.02.15.2 2.05 3.13 4.96 4.39.69.3 1.24.48 1.66.61.7.22 1.34.19 1.84.12.56-.09 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.34z"/><path d="M12.02 2.5c-5.26 0-9.52 4.26-9.52 9.52 0 1.68.44 3.31 1.28 4.75L2.5 21.5l4.86-1.27a9.5 9.5 0 004.66 1.22h.01c5.25 0 9.52-4.26 9.52-9.52s-4.27-9.43-9.53-9.43zm0 17.42h-.01a7.9 7.9 0 01-4.03-1.1l-.29-.17-3 .79.8-2.92-.19-.3a7.9 7.9 0 01-1.21-4.2c0-4.37 3.56-7.93 7.94-7.93 2.12 0 4.11.83 5.61 2.33a7.87 7.87 0 012.32 5.61c0 4.37-3.56 7.9-7.94 7.9z"/></svg>
+                Escríbeme por WhatsApp
+              </a>
+              <a href="mailto:jpabloomn@gmail.com" class="btn btn--ghost">Escribir un correo</a>
+            </div>
+          </div>
+
+          <form action="https://formsubmit.co/jpabloomn@gmail.com" method="POST" class="contact__form" id="contactForm">
+            <input type="hidden" name="_subject" value="Nuevo contacto desde el portafolio">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-row">
+              <div class="form-field"><label for="name">Nombre</label><input type="text" name="name" id="name" required></div>
+              <div class="form-field"><label for="email">Correo</label><input type="email" name="email" id="email" required></div>
+            </div>
+            <div class="form-field"><label for="subject">Asunto</label><input type="text" name="subject" id="subject" required></div>
+            <div class="form-field"><label for="message">Mensaje</label><textarea name="message" id="message" rows="5" required></textarea></div>
+            <button type="submit" class="btn btn--solid">Enviar mensaje</button>
+            <p class="form-status" id="formStatus" role="status">
+              <svg class="form-status__check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12l5 5L20 7"/></svg>
+              <span id="formStatusText"></span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__row">
+        <span>© 2026 Juan Pablo Madrigal Navarro</span>
+        <span>Medellín, Colombia</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
